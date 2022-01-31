@@ -1,0 +1,46 @@
+.user-card-container {
+  display: grid;
+  grid-template-columns: 0.25fr 2fr 2fr 2fr 7fr 0.5fr;
+  color: #fff;
+  font-size: 1rem;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  width: 80%;
+}
+.user-card-item {
+  text-align: start;
+}
+/* .user-card-index {
+}
+.user-card-username,
+.user-card-phone {
+}
+.user-card-email {
+}
+.user-card-address {
+} */
+.user-card-delete {
+  height: 20px;
+  cursor: pointer;
+}
+.user-card-header {
+  text-align: center;
+}
+@media all and (max-width: 992px) {
+  .user-card-container {
+    display: grid;
+    grid-template-columns: 0.25fr 2fr 2fr;
+    color: #fff;
+    font-size: 1rem;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    width: 90%;
+  }
+  .user-card-index {
+    display: none;
+  }
+}

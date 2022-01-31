@@ -1,0 +1,47 @@
+.alert-container {
+  background-color: #fff;
+  padding: 1rem;
+  border-left: 10px solid #20df7f;
+  animation: appear 3s ease forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+@media all and (max-width: 992px) {
+  .alert-container {
+    animation: appear2 3s ease forwards;
+  }
+  @keyframes appear2 {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    25% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    75% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+}
