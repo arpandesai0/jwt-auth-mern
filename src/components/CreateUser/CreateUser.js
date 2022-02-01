@@ -21,12 +21,17 @@ function CreateUser() {
     address: false,
   });
   const handleSubmit = () => {
-    if (
-      email.length <= 5 ||
-      username.length === 0 ||
-      phone.length !== 10 ||
-      address.length === 0
-    ) {
+    if (username.length === 0) {
+      setError({ ...error, username: true });
+      setSubmitError(true);
+    } else if (phone.length !== 10) {
+      setError({ ...error, phone: true });
+      setSubmitError(true);
+    } else if (email.length <= 5) {
+      setError({ ...error, email: true });
+      setSubmitError(true);
+    } else if (address.length === 0) {
+      setError({ ...error, address: true });
       setSubmitError(true);
     } else {
       //perform api request
@@ -57,7 +62,7 @@ function CreateUser() {
               setCreated(false);
             }, 3000);
           } else {
-            setErrorMessage(res.data.message);
+            setErrorMessage(res.data.message + ". Login again");
             setSubmitError(true);
             setSubmit(false);
           }

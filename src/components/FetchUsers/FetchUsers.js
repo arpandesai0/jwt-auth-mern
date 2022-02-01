@@ -13,6 +13,7 @@ function FetchUsers() {
         setLoader(false);
       } else {
         alert("Token expired or invalid");
+        localStorage.removeItem("intern-token");
         window.location.href = "/";
       }
     });
